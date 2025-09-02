@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oktoberfest Barcelona</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to better match the original site */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Using a font similar to the original for headings */
+        h1, h2, h3, h4, .anton-font {
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/334155/ffffff?text=Oktoberfest+Celebration');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        /* Custom blue color similar to the brand */
+        .oktoberfest-blue {
+            background-color: #005A9F;
+        }
+        /* Custom yellow/gold color for buttons */
+        .oktoberfest-gold {
+            background-color: #FFC107;
+        }
+        .oktoberfest-gold:hover {
+            background-color: #FFD54F;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header and Navigation -->
+    <header class="oktoberfest-blue sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-white text-2xl anton-font">OKTOBERFEST BCN</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#" class="text-white hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">INICIO</a>
+                    <a href="#" class="text-white hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">RESERVAS</a>
+                    <a href="#" class="text-white hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">EL EVENTO</a>
+                    <a href="#" class="text-white hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">COMIDA Y BEBIDA</a>
+                    <a href="#" class="text-white hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">FOTOS</a>
+                    <a href="#" class="text-white hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">CONTACTO</a>
+                    <a href="#" class="oktoberfest-gold text-blue-900 font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                        COMPRAR TICKETS
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4">
+                <a href="#" class="block text-white py-2 px-4 text-sm hover:bg-blue-800 rounded">INICIO</a>
+                <a href="#" class="block text-white py-2 px-4 text-sm hover:bg-blue-800 rounded">RESERVAS</a>
+                <a href="#" class="block text-white py-2 px-4 text-sm hover:bg-blue-800 rounded">EL EVENTO</a>
+                <a href="#" class="block text-white py-2 px-4 text-sm hover:bg-blue-800 rounded">COMIDA Y BEBIDA</a>
+                <a href="#" class="block text-white py-2 px-4 text-sm hover:bg-blue-800 rounded">FOTOS</a>
+                <a href="#" class="block text-white py-2 px-4 text-sm hover:bg-blue-800 rounded">CONTACTO</a>
+                 <a href="#" class="block mt-2 w-full text-center oktoberfest-gold text-blue-900 font-bold py-2 px-4 rounded-lg shadow-md">
+                    COMPRAR TICKETS
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg text-white">
+            <div class="bg-black bg-opacity-50 min-h-[80vh] flex flex-col items-center justify-center text-center p-6">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl anton-font text-shadow mb-4">OKTOBERFEST BARCELONA</h1>
+                <p class="text-2xl md:text-3xl font-semibold text-shadow mb-6">12ª EDICIÓN</p>
+                <div class="bg-white text-gray-800 rounded-lg p-4 mb-8 max-w-md mx-auto shadow-xl">
+                    <p class="text-xl md:text-2xl anton-font text-blue-900">Del 3 al 13 de Octubre 2024</p>
+                    <p class="font-semibold">Plaça de l'Univers de Fira Barcelona Montjuïc</p>
+                </div>
+                <a href="#" class="oktoberfest-gold text-blue-900 anton-font text-xl py-3 px-8 rounded-lg shadow-2xl transition duration-300 ease-in-out transform hover:scale-110">
+                    ¡RESERVA TU MESA!
+                </a>
+            </div>
+        </section>
+
+        <!-- Information Bar -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-800 mb-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" /></svg>
+                        <h3 class="anton-font text-xl text-gray-800">ENTRADA GENERAL GRATUITA</h3>
+                        <p class="text-gray-600 mt-2">Acceso libre a la carpa principal y zona exterior.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-800 mb-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" /></svg>
+                        <h3 class="anton-font text-xl text-gray-800">FECHAS Y HORARIOS</h3>
+                        <p class="text-gray-600 mt-2">Días laborables de 17h a 23h. Sábados y festivos de 12h a 01h.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-800 mb-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                        <h3 class="anton-font text-xl text-gray-800">UBICACIÓN</h3>
+                        <p class="text-gray-600 mt-2">Plaça de l'Univers de Fira Barcelona Montjuïc.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-800 mb-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" /></svg>
+                        <h3 class="anton-font text-xl text-gray-800">GRAN CARPA DE +6.500 M2</h3>
+                        <p class="text-gray-600 mt-2">Y una espectacular zona gastronómica y de actividades al aire libre.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food & Drink Section -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl anton-font text-blue-900">COMIDA Y BEBIDA</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Disfruta de la auténtica cerveza Paulaner, la cerveza oficial de la Oktoberfest de Múnich, y de una gran variedad de platos de la gastronomía tradicional bávara.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/e0c8a0/333333?text=Paulaner+Beer" alt="Cerveza Paulaner" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="anton-font text-2xl text-gray-800 mb-2">CERVEZA OFICIAL</h3>
+                        <p class="text-gray-600">La auténtica Paulaner Oktoberfest Bier, la cerveza oficial del festival en Múnich.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/d97706/ffffff?text=Pretzels" alt="Pretzels" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="anton-font text-2xl text-gray-800 mb-2">BREZEL Y MÁS</h3>
+                        <p class="text-gray-600">Disfruta del tradicional Brezel, salchichas, codillo, ensaladas y mucho más.</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/600x400/b91c1c/ffffff?text=German+Sausages" alt="Salchichas alemanas" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="anton-font text-2xl text-gray-800 mb-2">GASTRONOMÍA BÁVARA</h3>
+                        <p class="text-gray-600">Una selección de los mejores platos para una experiencia 100% alemana.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section -->
+        <section class="oktoberfest-blue text-white">
+            <div class="container mx-auto px-6 py-20 text-center">
+                 <h2 class="text-4xl md:text-5xl anton-font text-shadow">MÚSICA EN DIRECTO Y DJ</h2>
+                 <p class="mt-4 max-w-3xl mx-auto text-lg">La mejor música tradicional bávara, versiones de canciones internacionales y los éxitos del momento para hacerte bailar y cantar sin parar.</p>
+                 <a href="#" class="mt-8 inline-block oktoberfest-gold text-blue-900 anton-font text-lg py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    CONOCE A LOS ARTISTAS
+                </a>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="container mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl anton-font text-blue-900">ASÍ FUE LA 11ª EDICIÓN</h2>
+                 <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Revive los mejores momentos de la pasada edición de Oktoberfest Barcelona. ¡Te esperamos este año!</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="grid gap-4">
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x700/64748b/ffffff?text=Oktoberfest+1" alt=""></div>
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x500/64748b/ffffff?text=Oktoberfest+2" alt=""></div>
+                </div>
+                <div class="grid gap-4">
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x500/64748b/ffffff?text=Oktoberfest+3" alt=""></div>
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x800/64748b/ffffff?text=Oktoberfest+4" alt=""></div>
+                </div>
+                <div class="grid gap-4">
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x800/64748b/ffffff?text=Oktoberfest+5" alt=""></div>
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x400/64748b/ffffff?text=Oktoberfest+6" alt=""></div>
+                </div>
+                 <div class="grid gap-4">
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x600/64748b/ffffff?text=Oktoberfest+7" alt=""></div>
+                    <div><img class="h-auto max-w-full rounded-lg shadow-md" src="https://placehold.co/500x600/64748b/ffffff?text=Oktoberfest+8" alt=""></div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Map Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl anton-font text-blue-900 mb-4">CÓMO LLEGAR</h2>
+                        <p class="text-gray-700 font-bold text-lg mb-2">Fira Barcelona Montjuïc – Plaça de l'Univers</p>
+                        <p class="text-gray-600 mb-4">Av. de la Reina Maria Cristina, s/n, Sants-Montjuïc, 08004 Barcelona</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li><strong><span class="text-blue-800">METRO:</span></strong> L1 i L3 (Parada Espanya)</li>
+                            <li><strong><span class="text-blue-800">FGC:</span></strong> L8, S3, S4, S8, S9, R5, R6, R50, R60 (Parada Espanya)</li>
+                            <li><strong><span class="text-blue-800">BUS:</span></strong> D20, D40, H12, H16, V7, 13, 23, 46, 52, 65, 79, 91, 109, 150, 165</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg shadow-lg overflow-hidden">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.0452335198426!2d2.148780615425686!3d41.37424267926526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2635b733b59%3A0x1d15c5d933e14455!2sFira%20de%20Barcelona!5e0!3m2!1ses!2ses!4v1662035414619!5m2!1ses!2ses" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="oktoberfest-blue text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h4 class="anton-font text-xl mb-4">OKTOBERFEST BARCELONA</h4>
+                    <p class="text-sm text-blue-200">La gran fiesta de la cerveza.</p>
+                </div>
+                <div>
+                    <h4 class="anton-font text-xl mb-4">ENLACES</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-yellow-300">Aviso Legal</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="anton-font text-xl mb-4">SÍGUENOS</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-white hover:text-yellow-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-white hover:text-yellow-300">
+                           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-blue-700 pt-6 text-center text-sm text-blue-200">
+                <p>&copy; 2024 Oktoberfest Barcelona. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
