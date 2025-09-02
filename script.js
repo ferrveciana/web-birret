@@ -259,7 +259,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Add countdown timer for the event
 function addCountdownTimer() {
-    const eventDate = new Date('2025-09-15T18:00:00');
+    const eventDate = new Date('2025-10-17T19:00:00');
     const countdownElement = document.createElement('div');
     countdownElement.className = 'countdown';
     countdownElement.style.cssText = `
@@ -287,12 +287,12 @@ function addCountdownTimer() {
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             
             countdownElement.innerHTML = `
-                <div style="font-size: 0.9rem; margin-bottom: 0.5rem;">Comença en:</div>
+                <div style="font-size: 0.9rem; margin-bottom: 0.5rem;">Correbars en:</div>
                 <div style="font-size: 1.2rem;">${days}d ${hours}h ${minutes}m</div>
             `;
         } else {
             countdownElement.innerHTML = `
-                <div style="font-size: 1.1rem;">🎉 L'event ja ha començat!</div>
+                <div style="font-size: 1.1rem;">� El correbars ja ha començat!</div>
             `;
         }
     }
