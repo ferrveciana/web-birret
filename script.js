@@ -1,3 +1,18 @@
+// Loading Screen Control
+window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    
+    // Hide loading screen after minimum 2 seconds for the animation to be visible
+    setTimeout(() => {
+        loadingScreen.classList.add('fade-out');
+        
+        // Remove the loading screen from DOM after fade out
+        setTimeout(() => {
+            loadingScreen.remove();
+        }, 500);
+    }, 2000);
+});
+    
 // Mobile Navigation Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
