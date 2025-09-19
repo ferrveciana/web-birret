@@ -74,32 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     elementsToAnimate.forEach(el => observer.observe(el));
 });
 
-// Contact form handling
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const formEntries = Object.fromEntries(formData);
-    
-    // Simple form validation
-    if (!formEntries.name || !formEntries.email || !formEntries.message) {
-        showNotification('Si us plau, omple tots els camps.', 'error');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formEntries.email)) {
-        showNotification('Si us plau, introdueix un email vàlid.', 'error');
-        return;
-    }
-    
-    // Simulate form submission
-    showNotification('Missatge enviat correctament! Et respondrem aviat.', 'success');
-    this.reset();
-});
-
 // Ticket purchase simulation
 document.querySelectorAll('.ticket-card .btn-primary, .ticket-card-single .btn-primary').forEach(button => {
     button.addEventListener('click', function(e) {
@@ -277,19 +251,24 @@ function addCountdownTimer() {
     const eventDate = new Date('2025-10-17T19:00:00');
     const countdownElement = document.createElement('div');
     countdownElement.className = 'countdown';
+    let isLarge = true; // Track the current size state
+    
+    // Set initial large size
     countdownElement.style.cssText = `
         position: fixed;
         bottom: 20px;
         left: 20px;
         background: rgba(44, 90, 160, 0.9);
         color: white;
-        padding: 1rem;
-        border-radius: 10px;
+        padding: 1.5rem 2rem;
+        border-radius: 15px;
         font-weight: 600;
         z-index: 1000;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        min-width: 200px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        min-width: 280px;
         text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
     `;
     
     function updateCountdown() {
@@ -301,14 +280,27 @@ function addCountdownTimer() {
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
             
-            countdownElement.innerHTML = `
-                <div style="font-size: 0.9rem; margin-bottom: 0.5rem;">Correbars en:</div>
-                <div style="font-size: 1.2rem;">${days}d ${hours}h ${minutes}m</div>
-            `;
+            if (isLarge) {
+                countdownElement.innerHTML = `
+                    <div style="font-size: 1.1rem; margin-bottom: 0.8rem;">Correbars en:</div>
+                    <div style="font-size: 1.8rem; font-weight: 700;">${days}d ${hours}h ${minutes}m</div>
+                `;
+            } else {
+                countdownElement.innerHTML = `
+                    <div style="font-size: 0.8rem;">${days}d ${hours}h ${minutes}m</div>
+                `;
+            }
         } else {
-            countdownElement.innerHTML = `
-                <div style="font-size: 1.1rem;">� El correbars ja ha començat!</div>
-            `;
+            if (isLarge) {
+                countdownElement.innerHTML = `
+                    <div style="font-size: 1.3rem;">🎉 El correbars ja ha començat!</div>
+                    <div style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8;">Fes clic per fer més petit</div>
+                `;
+            } else {
+                countdownElement.innerHTML = `
+                    <div style="font-size: 0.9rem;">🎉 Correbars!</div>
+                `;
+            }
         }
     }
     
@@ -317,9 +309,23 @@ function addCountdownTimer() {
     
     document.body.appendChild(countdownElement);
     
-    // Make countdown dismissible
+    // Toggle size on click instead of hiding
     countdownElement.addEventListener('click', () => {
-        countdownElement.style.display = 'none';
+        isLarge = !isLarge;
+        
+        if (isLarge) {
+            // Make it large
+            countdownElement.style.padding = '1.5rem 2rem';
+            countdownElement.style.minWidth = '280px';
+            countdownElement.style.borderRadius = '15px';
+        } else {
+            // Make it small
+            countdownElement.style.padding = '0.8rem 1rem';
+            countdownElement.style.minWidth = '120px';
+            countdownElement.style.borderRadius = '10px';
+        }
+        
+        updateCountdown(); // Update content based on new size
     });
 }
 
@@ -328,36 +334,36 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(addCountdownTimer, 2000); // Show after 2 seconds
 });
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
+// Contact Form Handler
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
     
-    // Add a simple loading screen that fades out
-    const loadingScreen = document.createElement('div');
-    loadingScreen.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10000;
-        transition: opacity 0.5s ease;
-        color: white;
-        font-size: 1.5rem;
-        font-weight: 600;
-    `;
-    
-    loadingScreen.innerHTML = '🎭 El Birret de l\'Estany';
-    document.body.appendChild(loadingScreen);
-    
-    setTimeout(() => {
-        loadingScreen.style.opacity = '0';
-        setTimeout(() => {
-            loadingScreen.remove();
-        }, 500);
-    }, 1000);
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const nom = contactForm.querySelector('input[name="nom"]').value;
+            const email = contactForm.querySelector('input[name="email"]').value;
+            const missatge = contactForm.querySelector('textarea[name="missatge"]').value;
+            
+            // Check if all fields are filled
+            if (!nom || !email || !missatge) {
+                alert('Si us plau, omple tots els camps');
+                return;
+            }
+            
+            // Create Gmail compose URL
+            const subject = encodeURIComponent('Contacte El Birret de l\'Estany');
+            const body = encodeURIComponent(`Nom: ${nom}\nEmail: ${email}\n\nMissatge:\n${missatge}`);
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=birretestany@gmail.com&su=${subject}&body=${body}`;
+            
+            // Open Gmail in new tab
+            window.open(gmailUrl, '_blank');
+            
+            // Clear form after sending
+            contactForm.reset();
+            showNotification('S\'ha obert Gmail. Envia l\'email per completar el contacte.', 'success');
+        });
+    }
 });

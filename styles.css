@@ -263,6 +263,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -272,7 +273,7 @@ body {
 }
 
 .hero-date {
-    font-size: 1.1rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: #a8edea;
     margin-bottom: 2rem;
@@ -326,10 +327,9 @@ body {
 
 .hero-main-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     object-fit: cover;
 }
 
@@ -1100,7 +1100,7 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .about-grid,
